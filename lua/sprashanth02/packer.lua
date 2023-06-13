@@ -64,7 +64,7 @@ return require('packer').startup(function(use)
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
 
-    use { 'j-hui/fidget.nvim' }
+    --   use { 'j-hui/fidget.nvim' }
 
     use 'm4xshen/autoclose.nvim'
 
@@ -74,10 +74,9 @@ return require('packer').startup(function(use)
 
     use { 'stevearc/oil.nvim' }
 
-    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
-    use {'mfussenegger/nvim-dap'}
+    use { 'mfussenegger/nvim-dap' }
 
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
-
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 end)

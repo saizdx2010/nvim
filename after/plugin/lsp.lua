@@ -42,11 +42,11 @@ end)
 
 lsp.setup()
 
-require("fidget").setup({
- window = {
-    relative = "editor",         -- where to anchor, either "win" or "editor"
-    blend = 100,              -- &winblend for the window
-    zindex = nil,             -- the zindex value for the window
-    border = "none",          -- style of border for the fidget window
-  },
-})
+-- require("fidget").setup({
+--  window = {
+--     relative = "editor",         -- where to anchor, either "win" or "editor"
+--     blend = 100,              -- &winblend for the window
+--     zindex = nil,             -- the zindex value for the window
+--     border = "none",          -- style of border for the fidget window
+--   },
+-- })
