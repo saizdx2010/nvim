@@ -25,16 +25,9 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {
-                -- Optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
-
+            { 'neovim/nvim-lspconfig',          tag = 'v1.8.0',  pin = true }, -- Required
+            { 'mason-org/mason.nvim',           tag = 'v1.11.0', pin = true },
+            { 'mason-org/mason-lspconfig.nvim', tag = 'v1.32.0', pin = true },
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
@@ -76,7 +69,7 @@ return require('packer').startup(function(use)
 
     use { 'mfussenegger/nvim-dap' }
 
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
 
     use {
         "ThePrimeagen/harpoon",
